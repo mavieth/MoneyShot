@@ -71,7 +71,7 @@ class ViewController: UIViewController {
                     NSLog("Success: \(url)")
                     
                     var json = JSON(json!)
-                    println(json)
+//                    println(json)
                     for (key: String, subJson: JSON) in json {
                         print("Balance: ")
                         println(subJson["balance"])
@@ -81,12 +81,8 @@ class ViewController: UIViewController {
                         println(subJson["user"]["friends_count"])
                         
                     }
-//                    println(name)
-//                    name = json[0][1].string
-//                    println(name)
-//                    name = json[0].string
-//                    println(name)
                 }
+                
         }
 
 
