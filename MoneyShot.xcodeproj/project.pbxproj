@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1B38E7E396E3C3FD72A0EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE34450C5799E08BBF9A45F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A3B6AD801B62283900468031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6AD7F1B62283900468031 /* AppDelegate.swift */; };
 		A3B6AD821B62283900468031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6AD811B62283900468031 /* ViewController.swift */; };
 		A3B6AD851B62283A00468031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B6AD831B62283900468031 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7024E0D257033340BAD6BF20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A3B6AD7A1B62283900468031 /* MoneyShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B6AD7E1B62283900468031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3B6AD7F1B62283900468031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		A3B6AD8F1B62283A00468031 /* MoneyShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B6AD941B62283A00468031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3B6AD951B62283A00468031 /* MoneyShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyShotTests.swift; sourceTree = "<group>"; };
+		B3018578734C1AA185ECFDA6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FAE34450C5799E08BBF9A45F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1B38E7E396E3C3FD72A0EA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 				A3B6AD7C1B62283900468031 /* MoneyShot */,
 				A3B6AD921B62283A00468031 /* MoneyShotTests */,
 				A3B6AD7B1B62283900468031 /* Products */,
+				D06F7CFFBA2166DEB83C6F60 /* Pods */,
+				DED5932086BFE245F4822196 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +119,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D06F7CFFBA2166DEB83C6F60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7024E0D257033340BAD6BF20 /* Pods.debug.xcconfig */,
+				B3018578734C1AA185ECFDA6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DED5932086BFE245F4822196 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAE34450C5799E08BBF9A45F /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3B6AD991B62283A00468031 /* Build configuration list for PBXNativeTarget "MoneyShot" */;
 			buildPhases = (
+				5DF9F4D7C5E6A1DB719E2F71 /* Check Pods Manifest.lock */,
 				A3B6AD761B62283900468031 /* Sources */,
 				A3B6AD771B62283900468031 /* Frameworks */,
 				A3B6AD781B62283900468031 /* Resources */,
+				41BC975C2799E952DD96996B /* Embed Pods Frameworks */,
+				38113FC53C34A3B44459980F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38113FC53C34A3B44459980F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41BC975C2799E952DD96996B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DF9F4D7C5E6A1DB719E2F71 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3B6AD761B62283900468031 /* Sources */ = {
@@ -340,6 +415,7 @@
 		};
 		A3B6AD9A1B62283A00468031 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7024E0D257033340BAD6BF20 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoneyShot/Info.plist;
@@ -350,6 +426,7 @@
 		};
 		A3B6AD9B1B62283A00468031 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3018578734C1AA185ECFDA6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoneyShot/Info.plist;
@@ -411,6 +488,7 @@
 				A3B6AD9B1B62283A00468031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3B6AD9C1B62283A00468031 /* Build configuration list for PBXNativeTarget "MoneyShotTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +497,7 @@
 				A3B6AD9E1B62283A00468031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
