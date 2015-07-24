@@ -22,3 +22,5 @@ Pods
 # Derived data
 DerivedData/MoneyShot
 DervivedData/*
+
+*Info.plist
