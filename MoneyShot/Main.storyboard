@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J17-CR-jGM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Request Payment-->
@@ -15,20 +16,72 @@
                     <view key="view" contentMode="scaleToFill" id="cNV-sJ-N4n">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-7t-C7t">
+                                <rect key="frame" x="66" y="131" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="43n-8J-J2O"/>
+                                    <constraint firstAttribute="width" constant="50" id="iNU-S7-rug"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klh-pS-tcz">
+                                <rect key="frame" x="140" y="131" width="394" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-lU-d42">
+                                <rect key="frame" x="66" y="216" width="468" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="DRO-lk-vnY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrO-oR-U6J">
+                                <rect key="frame" x="66" y="429" width="468" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QUO-lU-d42" firstAttribute="leading" secondItem="bhn-7t-C7t" secondAttribute="leading" id="0Ds-RT-DcO"/>
+                            <constraint firstItem="jrO-oR-U6J" firstAttribute="centerX" secondItem="cNV-sJ-N4n" secondAttribute="centerX" id="4KL-p9-mbD"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="leading" secondItem="cNV-sJ-N4n" secondAttribute="leadingMargin" constant="50" id="IuZ-op-agw"/>
+                            <constraint firstItem="Klh-pS-tcz" firstAttribute="leading" secondItem="bhn-7t-C7t" secondAttribute="trailing" constant="24" id="PSf-e8-fSs"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="top" secondItem="XEg-38-QtZ" secondAttribute="bottom" constant="67" id="RnO-N5-5RF"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="bottom" secondItem="Klh-pS-tcz" secondAttribute="bottom" id="VFK-TR-NzU"/>
+                            <constraint firstItem="QUO-lU-d42" firstAttribute="top" secondItem="bhn-7t-C7t" secondAttribute="bottom" constant="35" id="WZt-C7-G3V"/>
+                            <constraint firstItem="QUO-lU-d42" firstAttribute="trailing" secondItem="Klh-pS-tcz" secondAttribute="trailing" id="WuV-h5-97C"/>
+                            <constraint firstItem="QUO-lU-d42" firstAttribute="leading" secondItem="jrO-oR-U6J" secondAttribute="leading" id="XiY-Jw-5av"/>
+                            <constraint firstItem="jrO-oR-U6J" firstAttribute="trailing" secondItem="QUO-lU-d42" secondAttribute="trailing" id="flq-nd-Sek"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="top" secondItem="Klh-pS-tcz" secondAttribute="top" id="sb2-fd-lu8"/>
+                            <constraint firstItem="JVd-lS-Le1" firstAttribute="top" secondItem="jrO-oR-U6J" secondAttribute="bottom" constant="141" id="xaw-mH-Ffz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Request Payment" id="7Dk-uA-Aj1">
                         <barButtonItem key="leftBarButtonItem" title="Log in" id="tYm-XA-bMU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="LoginToVenmo:" destination="SFQ-9q-Rwm" id="2Oh-r6-d0X"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Send" id="o21-Ce-Kyf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="sendButton:" destination="SFQ-9q-Rwm" id="pgT-mc-qRs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amountTextField" destination="jrO-oR-U6J" id="MBS-ls-wMb"/>
+                        <outlet property="logoutOfVenmo" destination="tYm-XA-bMU" id="ypI-dH-zn9"/>
+                        <outlet property="primaryPhoneNumber" destination="QUO-lU-d42" id="OVF-lq-haJ"/>
+                        <outlet property="userImage" destination="bhn-7t-C7t" id="hyE-Wo-3Aj"/>
+                        <outlet property="userName" destination="Klh-pS-tcz" id="QbS-F9-s1L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gC-82-jAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +95,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jvi-vr-tuc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.45733551039999998" green="0.80777735770000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.05779662364759152" green="0.50710227272727271" blue="0.1809372652346731" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99114893150000005" green="0.99380613849999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
