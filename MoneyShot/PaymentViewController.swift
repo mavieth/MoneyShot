@@ -13,15 +13,11 @@ import Venmo_iOS_SDK
 
 class PaymentViewController: UIViewController {
     
-
-
-    
-
-    
     // User Image 50px x 50px
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var userName: UILabel!
     @IBOutlet var primaryPhoneNumber: UILabel!
+    @IBOutlet var VenCalculatorInputView: UITextField!    
     @IBOutlet var amountTextField: UITextField!
     var amount = 100.00;
 
@@ -43,6 +39,8 @@ class PaymentViewController: UIViewController {
 
     }
     
+
+    
     
     
     func updateVenmoStatus() {
@@ -58,6 +56,7 @@ class PaymentViewController: UIViewController {
             let accessToken = "54086463225f75a8f4afa8f6c112004f529f28245054ddcd25f38eb8e6d2297b";
             let url = "https://api.venmo.com/v1/users/:\(userID)?access_token=\(accessToken)";
             println(url);
+            
         
             
             
@@ -83,6 +82,14 @@ class PaymentViewController: UIViewController {
         }
         
     }
+    
+    
+
+    
+
+    
+    
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! PaymentViewController;

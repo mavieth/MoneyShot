@@ -2,7 +2,7 @@
 platform :ios, '6.0'
 
 pod 'Venmo-iOS-SDK', '~>1.3'
-
+pod 'VENCalculatorInputView', '~> 1.5'
 
 target 'MoneyShot' do
 

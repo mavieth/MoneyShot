@@ -20,8 +20,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-7t-C7t">
                                 <rect key="frame" x="66" y="131" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="43n-8J-J2O"/>
-                                    <constraint firstAttribute="width" constant="50" id="iNU-S7-rug"/>
+                                    <constraint firstAttribute="height" constant="50" id="cbW-dh-Mb8"/>
+                                    <constraint firstAttribute="width" constant="50" id="tOJ-eQ-ufq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klh-pS-tcz">
@@ -33,7 +33,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-lU-d42">
                                 <rect key="frame" x="66" y="216" width="468" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="DRO-lk-vnY"/>
+                                    <constraint firstAttribute="height" constant="45" id="sLc-iW-joA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,21 +44,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="VenCalculator" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Il7-63-0eg" customClass="VENCalculatorInputTextField">
+                                <rect key="frame" x="205" y="369" width="190" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="FMB-Zc-4TB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QUO-lU-d42" firstAttribute="leading" secondItem="bhn-7t-C7t" secondAttribute="leading" id="0Ds-RT-DcO"/>
-                            <constraint firstItem="jrO-oR-U6J" firstAttribute="centerX" secondItem="cNV-sJ-N4n" secondAttribute="centerX" id="4KL-p9-mbD"/>
-                            <constraint firstItem="bhn-7t-C7t" firstAttribute="leading" secondItem="cNV-sJ-N4n" secondAttribute="leadingMargin" constant="50" id="IuZ-op-agw"/>
-                            <constraint firstItem="Klh-pS-tcz" firstAttribute="leading" secondItem="bhn-7t-C7t" secondAttribute="trailing" constant="24" id="PSf-e8-fSs"/>
-                            <constraint firstItem="bhn-7t-C7t" firstAttribute="top" secondItem="XEg-38-QtZ" secondAttribute="bottom" constant="67" id="RnO-N5-5RF"/>
-                            <constraint firstItem="bhn-7t-C7t" firstAttribute="bottom" secondItem="Klh-pS-tcz" secondAttribute="bottom" id="VFK-TR-NzU"/>
-                            <constraint firstItem="QUO-lU-d42" firstAttribute="top" secondItem="bhn-7t-C7t" secondAttribute="bottom" constant="35" id="WZt-C7-G3V"/>
-                            <constraint firstItem="QUO-lU-d42" firstAttribute="trailing" secondItem="Klh-pS-tcz" secondAttribute="trailing" id="WuV-h5-97C"/>
-                            <constraint firstItem="QUO-lU-d42" firstAttribute="leading" secondItem="jrO-oR-U6J" secondAttribute="leading" id="XiY-Jw-5av"/>
-                            <constraint firstItem="jrO-oR-U6J" firstAttribute="trailing" secondItem="QUO-lU-d42" secondAttribute="trailing" id="flq-nd-Sek"/>
-                            <constraint firstItem="bhn-7t-C7t" firstAttribute="top" secondItem="Klh-pS-tcz" secondAttribute="top" id="sb2-fd-lu8"/>
-                            <constraint firstItem="JVd-lS-Le1" firstAttribute="top" secondItem="jrO-oR-U6J" secondAttribute="bottom" constant="141" id="xaw-mH-Ffz"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="bottom" secondItem="Klh-pS-tcz" secondAttribute="bottom" id="4UB-ct-XRf"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="top" secondItem="XEg-38-QtZ" secondAttribute="bottom" constant="67" id="7Im-Le-WfU"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="leading" secondItem="QUO-lU-d42" secondAttribute="leading" id="GHf-ua-ZUy"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="leading" secondItem="cNV-sJ-N4n" secondAttribute="leadingMargin" constant="50" id="J3b-CC-vpY"/>
+                            <constraint firstItem="Il7-63-0eg" firstAttribute="centerX" secondItem="jrO-oR-U6J" secondAttribute="centerX" id="L0D-Y6-c6a"/>
+                            <constraint firstItem="JVd-lS-Le1" firstAttribute="top" secondItem="jrO-oR-U6J" secondAttribute="bottom" constant="141" id="OvL-ce-kpw"/>
+                            <constraint firstItem="jrO-oR-U6J" firstAttribute="trailing" secondItem="QUO-lU-d42" secondAttribute="trailing" id="WOr-lh-8cJ"/>
+                            <constraint firstItem="jrO-oR-U6J" firstAttribute="centerX" secondItem="cNV-sJ-N4n" secondAttribute="centerX" id="ZyE-rK-wky"/>
+                            <constraint firstItem="Klh-pS-tcz" firstAttribute="trailing" secondItem="QUO-lU-d42" secondAttribute="trailing" id="bcf-Ug-dx8"/>
+                            <constraint firstItem="jrO-oR-U6J" firstAttribute="top" secondItem="Il7-63-0eg" secondAttribute="bottom" constant="30" id="hBN-0Q-qzX"/>
+                            <constraint firstItem="bhn-7t-C7t" firstAttribute="top" secondItem="Klh-pS-tcz" secondAttribute="top" id="oIt-Bw-XHW"/>
+                            <constraint firstItem="QUO-lU-d42" firstAttribute="top" secondItem="bhn-7t-C7t" secondAttribute="bottom" constant="35" id="pEq-3m-S3S"/>
+                            <constraint firstItem="QUO-lU-d42" firstAttribute="leading" secondItem="jrO-oR-U6J" secondAttribute="leading" id="r1b-CZ-8JV"/>
+                            <constraint firstItem="Klh-pS-tcz" firstAttribute="leading" secondItem="bhn-7t-C7t" secondAttribute="trailing" constant="24" id="sro-h1-IXw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Request Payment" id="7Dk-uA-Aj1">
@@ -76,6 +86,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="VenCalculatorInputView" destination="Il7-63-0eg" id="3FY-nK-5d5"/>
                         <outlet property="amountTextField" destination="jrO-oR-U6J" id="MBS-ls-wMb"/>
                         <outlet property="logoutOfVenmo" destination="tYm-XA-bMU" id="ypI-dH-zn9"/>
                         <outlet property="primaryPhoneNumber" destination="QUO-lU-d42" id="OVF-lq-haJ"/>
