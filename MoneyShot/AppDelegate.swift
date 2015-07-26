@@ -7,16 +7,28 @@
 //
 
 import UIKit
+import Venmo_iOS_SDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        Venmo.startWithAppId("2786", secret: "nsDXTuqUVm8mKARwh73yz8sYehSsuLpU", name: "SplitMo");
+        println("Logged in with Venmo AppDelegate - didFinishWithOptions");
         return true
+    }
+    
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        
+        if (Venmo.sharedInstance().handleOpenURL(url)) {
+            return true;
+        }
+        return false;
     }
 
     func applicationWillResignActive(application: UIApplication) {

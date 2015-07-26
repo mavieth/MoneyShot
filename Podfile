@@ -1,6 +1,14 @@
-use_frameworks!
+# Uncomment this line to define a global platform for your project
+platform :ios, '6.0'
 
-pod 'Alamofire', '~> 1.2'
-pod 'SwiftyJSON'
-pod 'Venmo-iOS-SDK'
+pod 'Venmo-iOS-SDK', '~>1.3'
+
+
+target 'MoneyShot' do
+
+end
+
+target 'MoneyShotTests' do
+
+end
 

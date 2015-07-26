@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
+import Venmo_iOS_SDK
+
 
 
 //Secret:	nsDXTuqUVm8mKARwh73yz8sYehSsuLpU
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         
 //        access_token REQUIRED	Your own access token used for authentication to the API.
@@ -67,38 +68,62 @@ class ViewController: UIViewController {
 //        }
 //        https://api.venmo.com/v1/me?access_token=4e4sw1111111111t8an8dektggtcbb45
         
+//        
+//        var url = "https://api.venmo.com/v1/me"
+//        Alamofire.request(.GET, url, parameters: ["access_token": "49458175efa92e5af8d62f405b373ff0ef1af3ce998fb16fee98ebec219f0161"])
+//            .responseJSON { (req, res, json, error) in
+//                if(error != nil) {
+//                    NSLog("Error: \(error)")
+//                    println(req)
+//                    println(res)
+//                }
+//                else {
+//                    NSLog("Success: \(url)")
+//                    
+//                    var json = JSON(json!)
+////                    println(json)
+//                    for (key: String, subJson: JSON) in json {
+//                        print("Balance: ")
+//                        println(subJson["balance"])
+//                        println(subJson["user"]["id"])
+//                        println(subJson["user"]["about"])
+//                        print("Number of Friends: ")
+//                        println(subJson["user"]["friends_count"])
+//                        
+//                    }
+//                }
+//                
+//        }
+
+
+
         
-        var url = "https://api.venmo.com/v1/me"
-        Alamofire.request(.GET, url, parameters: ["access_token": "49458175efa92e5af8d62f405b373ff0ef1af3ce998fb16fee98ebec219f0161"])
-            .responseJSON { (req, res, json, error) in
-                if(error != nil) {
-                    NSLog("Error: \(error)")
-                    println(req)
-                    println(res)
-                }
-                else {
-                    NSLog("Success: \(url)")
-                    
-                    var json = JSON(json!)
-//                    println(json)
-                    for (key: String, subJson: JSON) in json {
-                        print("Balance: ")
-                        println(subJson["balance"])
-                        println(subJson["user"]["id"])
-                        println(subJson["user"]["about"])
-                        print("Number of Friends: ")
-                        println(subJson["user"]["friends_count"])
-                        
-                    }
-                }
+        func updateVenmoStatus() {
+            if (Venmo.sharedInstance().isSessionValid() == true) {
+                let username = Venmo.sharedInstance().session.user.displayName;
+                let leftItem = UIBarButtonItem(title: username, style: UIBarButtonItemStyle.Bordered, target: self, action: "logout");
+                self.navigationItem.setLeftBarButtonItem(leftItem, animated: true);
+            }
+            else {
+                let leftItem = UIBarButtonItem(title: "Log in", style: UIBarButtonItemStyle.Bordered, target: self, action: "login");
                 
+                self.navigationItem.setLeftBarButtonItem(leftItem, animated: true);
+            }
         }
-
-
-
         
-
         
+//
+//        func login() {
+//            Venmo.sharedInstance().requestPermissions(["access_profile", "make_payments"], withCompletionHandler: { (success, error) -> Void in
+//                if (success) {
+////                    self.updateVenmoStatus()
+//                }
+//                else {
+//                    UIAlertView(title: "Authorization failed", message: error.localizedDescription, delegate: nil, cancelButtonTitle: "OK").show();
+//                }
+//            });
+//        }
+//        
 
         
     }
