@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+
 //Secret:	nsDXTuqUVm8mKARwh73yz8sYehSsuLpU
 //ID:	2786
 //Android Return URL:	venmo2786://	?
@@ -96,17 +97,7 @@ class ViewController: UIViewController {
 
 
         
-        
-        
-//        var url = "https://sandbox-api.venmo.com/v1/payments"
-//        
-//        var x = Alamofire.request(.GET, url)
-//        debugPrint(x)
-//
-//        Alamofire.request(.GET, url)
-//            .responseString { _, _, string, _ in
-//                println(string)
-//        }
+
         
 
         
