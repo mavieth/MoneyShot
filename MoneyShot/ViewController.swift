@@ -23,35 +23,27 @@ import Venmo_iOS_SDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet var TextField: UITextField!
+    var buttons: [UIButton] = [];
+    
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
 
+        super.viewDidLoad()
+        self.updateVenmoStatus();
     }
     
-    // Update Venmo Status
     func updateVenmoStatus() {
         if (Venmo.sharedInstance().isSessionValid() == true) {
             let username = Venmo.sharedInstance().session.user.displayName;
-            
-            let leftItem = UIBarButtonItem(title: username, style: UIBarButtonItemStyle.Plain, target: self, action: "Venmo Logout");
+            let leftItem = UIBarButtonItem(title: username, style: UIBarButtonItemStyle.Plain, target: self, action: "logout");
             self.navigationItem.setLeftBarButtonItem(leftItem, animated: true);
         }
         else {
-            let leftItem = UIBarButtonItem(title: "Log in", style: UIBarButtonItemStyle.Plain, target: self, action: "login");
-            
+            let leftItem = UIBarButtonItem(title: "Login", style: UIBarButtonItemStyle.Plain, target: self, action: "login");
             self.navigationItem.setLeftBarButtonItem(leftItem, animated: true);
         }
-    }
-    
-    
-    // Payment Button Tapped
-    func buttonTapped(sender: UIButton) {
-        self.performSegueWithIdentifier("Payment", sender: sender);
-        println(VENHTTP.description());
-
-
     }
     
     
@@ -67,11 +59,22 @@ class ViewController: UIViewController {
         });
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as! PaymentViewController;
+        let text = (sender as! UIButton).titleForState(UIControlState.Normal)!;
+    }
+    
+    
+    func logout() {
+        Venmo.sharedInstance().logout();
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
 
 }

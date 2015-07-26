@@ -94,13 +94,13 @@
 				A3B6AD7F1B62283900468031 /* AppDelegate.swift */,
 				A36177D31B6487D900D5099F /* MoneyShot.m */,
 				A3B6AD811B62283900468031 /* ViewController.swift */,
+				A38C03311B649B37002C81AD /* PaymentViewController.swift */,
+				A38C03331B64A0EB002C81AD /* ProfileViewController.swift */,
 				A32032EC1B648CC400255AD9 /* Main.storyboard */,
 				A3B6AD861B62283A00468031 /* Images.xcassets */,
 				A3B6AD881B62283A00468031 /* LaunchScreen.xib */,
 				A3B6AD7D1B62283900468031 /* Supporting Files */,
 				A36177D21B6487D900D5099F /* MoneyShot-Bridging-Header.h */,
-				A38C03311B649B37002C81AD /* PaymentViewController.swift */,
-				A38C03331B64A0EB002C81AD /* ProfileViewController.swift */,
 			);
 			path = MoneyShot;
 			sourceTree = "<group>";

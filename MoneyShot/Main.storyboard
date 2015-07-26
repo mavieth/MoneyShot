@@ -1,102 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cqW-hK-56e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J17-CR-jGM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--FriendsNavigationItem-->
-        <scene sceneID="bVj-GM-XBb">
+        <!--Request Payment-->
+        <scene sceneID="2ks-7u-gYY">
             <objects>
-                <tableViewController id="gFb-vX-P9o" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CZ7-ND-ZIa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IoW-qk-Nhy">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IoW-qk-Nhy" id="gaP-l4-D9w">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="gFb-vX-P9o" id="mPk-Lc-9cF"/>
-                            <outlet property="delegate" destination="gFb-vX-P9o" id="hZf-OT-2l3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="FriendsNavigationItem" id="AtH-gu-m7w">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="w0j-Hy-u7o"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JIu-cd-Q4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1683" y="414"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="O2y-Y4-nhd">
-            <objects>
-                <viewController id="cWY-JY-isa" userLabel="Profile" sceneMemberID="viewController">
+                <viewController id="SFQ-9q-Rwm" userLabel="Request Payment" customClass="PaymentViewController" customModule="MoneyShot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="C00-WR-xuq"/>
-                        <viewControllerLayoutGuide type="bottom" id="nPc-Eg-2Kz"/>
+                        <viewControllerLayoutGuide type="top" id="XEg-38-QtZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="JVd-lS-Le1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qsK-f6-Djf">
+                    <view key="view" contentMode="scaleToFill" id="cNV-sJ-N4n">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spw-gq-Yh5">
-                                <rect key="frame" x="277" y="164" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ProfileMenuItem" id="yDE-ng-l3t" userLabel="ProfileMenuItem"/>
+                    <navigationItem key="navigationItem" title="Request Payment" id="7Dk-uA-Aj1">
+                        <barButtonItem key="leftBarButtonItem" title="Log in" id="tYm-XA-bMU">
+                            <connections>
+                                <action selector="LoginToVenmo:" destination="SFQ-9q-Rwm" id="2Oh-r6-d0X"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="o21-Ce-Kyf">
+                            <connections>
+                                <action selector="sendButton:" destination="SFQ-9q-Rwm" id="pgT-mc-qRs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2MS-uH-nLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gC-82-jAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="1176"/>
+            <point key="canvasLocation" x="1456" y="118"/>
         </scene>
-        <!--MainViewController-->
-        <scene sceneID="r7g-ke-Xq2">
+        <!--Navigation Controller-->
+        <scene sceneID="pAe-da-h6c">
             <objects>
-                <tabBarController title="MainViewController" id="cqW-hK-56e" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Fnk-OY-OHv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Kbw-CP-nEf" kind="relationship" relationship="viewControllers" id="0pk-7E-rWb"/>
-                        <segue destination="cWY-JY-isa" kind="relationship" relationship="viewControllers" id="Ld3-Xd-Qxm"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lkb-HP-jra" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="65" y="844"/>
-        </scene>
-        <!--Friends-->
-        <scene sceneID="itg-ia-YKk">
-            <objects>
-                <navigationController title="FriendsViewController" automaticallyAdjustsScrollViewInsets="NO" id="Kbw-CP-nEf" userLabel="Friends" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" id="8zs-9g-pti" userLabel="FriendsMenuItem"/>
+                <navigationController id="J17-CR-jGM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vjU-q4-FGF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jvi-vr-tuc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.45733551039999998" green="0.80777735770000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gFb-vX-P9o" kind="relationship" relationship="rootViewController" id="vN8-P7-UwO"/>
+                        <segue destination="SFQ-9q-Rwm" kind="relationship" relationship="rootViewController" id="cyF-oo-6Br"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a2b-dc-1S3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBl-3O-6Gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="414"/>
+            <point key="canvasLocation" x="644" y="118"/>
         </scene>
     </scenes>
 </document>

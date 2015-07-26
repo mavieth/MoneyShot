@@ -8,23 +8,46 @@
 
 
 import UIKit
+import Venmo_iOS_SDK
+
 
 class PaymentViewController: UIViewController {
+
+
     
-    @IBOutlet weak var amountTextField: UITextField!
-    @IBOutlet weak var recipientTextField: UITextField!
-    @IBOutlet weak var noteTextField: UITextField!
-    
-    var amount = 0.0;
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.amountTextField.text =  String(format:"%1.2f", self.amount);
+    @IBAction func LoginToVenmo(sender: AnyObject) {
+        println("Login To Venmo");
+        Venmo.sharedInstance().requestPermissions(["access_profile", "make_payments"], withCompletionHandler: { (success, error) -> Void in
+            if (success) {
+                self.updateVenmoStatus()
+            }
+            else {
+                UIAlertView(title: "Authorization failed", message: error.localizedDescription, delegate: nil, cancelButtonTitle: "OK").show();
+            }
+        });
     }
     
     
-    @IBAction func sendButtonTapped(sender: AnyObject) {
-        
+    func updateVenmoStatus() {
+        if (Venmo.sharedInstance().isSessionValid() == true) {
+            let username = Venmo.sharedInstance().session.user.displayName;
+            println("Thanks for logging in...");
+            println(username);
+            let leftItem = UIBarButtonItem(title: username, style: UIBarButtonItemStyle.Plain, target: self, action: "logout");
+            self.navigationItem.setLeftBarButtonItem(leftItem, animated: true);
+        }
+        else {
+            let leftItem = UIBarButtonItem(title: "Login", style: UIBarButtonItemStyle.Plain, target: self, action: "login");
+            self.navigationItem.setLeftBarButtonItem(leftItem, animated: true);
+        }
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func sendButton(sender: AnyObject) {
+        println("Send button tapped.");
     }
 }
