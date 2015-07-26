@@ -10,6 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+//Secret:	nsDXTuqUVm8mKARwh73yz8sYehSsuLpU
+//ID:	2786
+//Android Return URL:	venmo2786://	?
+//Webhook URL:	None	?
+//Web Redirect URL:	https://api.venmo.com/v1/payments	?
+//Privacy Policy URL:
+//Terms of Service URL:
+//iPhone App Store ID:
 
 
 class ViewController: UIViewController {
