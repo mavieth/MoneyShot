@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Venmo_iOS_SDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("Logged in with Venmo AppDelegate - didFinishWithOptions");
         return true
     }
+    
     
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {

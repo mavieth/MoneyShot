@@ -8,7 +8,7 @@
 
 
 import UIKit
-import Venmo_iOS_SDK
+
 
 
 class PaymentViewController: UIViewController {
@@ -36,9 +36,16 @@ class PaymentViewController: UIViewController {
             }
         });
         
-
     }
     
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        
+        if (Venmo.sharedInstance().handleOpenURL(url)) {
+            return true;
+        }
+        return false;
+    }
 
     
     
@@ -49,6 +56,7 @@ class PaymentViewController: UIViewController {
             let x = Venmo.sharedInstance().session.user.debugDescription;
             println(x);
 //            NSString *newPath = [NSString stringWithFormat:@"venmosdk://venmo.com%@", path];
+            
             let userID = Venmo.sharedInstance().session.description;
             let y = Venmo.sharedInstance().session.state;
             println(y);
@@ -56,8 +64,6 @@ class PaymentViewController: UIViewController {
             let accessToken = "54086463225f75a8f4afa8f6c112004f529f28245054ddcd25f38eb8e6d2297b";
             let url = "https://api.venmo.com/v1/users/:\(userID)?access_token=\(accessToken)";
             println(url);
-            
-        
             
             
             let leftItem = UIBarButtonItem(title: username, style: UIBarButtonItemStyle.Plain, target: self, action: "logout");
