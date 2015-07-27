@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -198,7 +198,6 @@
 				TargetAttributes = {
 					A3B6AD791B62283900468031 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = DFN4KT5YK3;
 					};
 					A3B6AD8E1B62283A00468031 = {
 						CreatedOnToolsVersion = 6.4;
@@ -207,7 +206,7 @@
 				};
 			};
 			buildConfigurationList = A3B6AD751B62283900468031 /* Build configuration list for PBXProject "MoneyShot" */;
-			compatibilityVersion = "Xcode 6.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
